@@ -566,6 +566,18 @@ class SketchField extends PureComponent {
   };
 
   componentDidMount = () => {
+    // Fabric.js demos · Controls customization
+    // http://fabricjs.com/controls-customization
+
+    // How to change default appearance of Fabric.js resize handles?
+    // https://stackoverflow.com/questions/30309837/how-to-change-default-appearance-of-fabric-js-resize-handles
+    fabric.Object.prototype.set({
+      transparentCorners: false,
+      borderColor: '#ff0000',
+      cornerColor: '#ff0000',
+      cornerStyle: 'circle',
+    });
+
     let {
       tool,
       value,
